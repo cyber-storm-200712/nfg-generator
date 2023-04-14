@@ -1,0 +1,14 @@
+{
+  "name": "nft-generator",
+  "version": "1.0.0",
+  "description": "generate multiple nft collections using trates",
+  "main": "./bin/index.js",
+  "bin": {
+    "tran": "./bin/index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "cyberstorm",
+  "license": "ISC"
+}
