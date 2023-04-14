@@ -1,6 +1,6 @@
 {
   "name": "nft-collection-generator",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "generate multiple nft collections using trates",
   "main": "./bin/index.js",
   "bin": {

@@ -32,9 +32,19 @@ const ctx = canvas.getContext("2d");
 
 // const priorities = ['punks','top','bread'];
 // const priorities = ['skin','eyes','mouth'];
-const priorities = argumentsOption.layers
+// const priorities = [
+//     "tails",
+//     "wings",
+//     "skin",
+//     "hat",
+//     "eyes",
+//     "mouth",
+//     "clothes",
+// ];
 
-const main = async (numberOfOutputs) => {
+const priorities = argumentsOption.layers;
+
+const main = async (numberOfOutputs=10) => {
     const traitTypesDir = dir.traitTypes;
     // register all the traits
     const types = fs.readdirSync(traitTypesDir);
@@ -146,5 +156,5 @@ const drawImage = async (traitTypes, background, index) => {
 //main
 (() => {
     recreateOutputsDir();
-    main(process.argv[2]);
+    main();
 })();
