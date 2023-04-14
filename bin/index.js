@@ -30,8 +30,6 @@ let totalOutputs = 0;
 const canvas = createCanvas(imageFormat.width, imageFormat.height);
 const ctx = canvas.getContext("2d");
 
-// const priorities = ['punks','top','bread'];
-// const priorities = ['skin','eyes','mouth'];
 // const priorities = [
 //     "tails",
 //     "wings",
@@ -51,7 +49,7 @@ const main = async (numberOfOutputs=10) => {
 
     // set all priotized layers to be drawn first. for eg: punk type, top... You can set these values in the priorities array in line 21
     const traitTypes = priorities
-        .concat(types.filter((x) => !priorities.includes(x)))
+        // .concat(types.filter((x) => !priorities.includes(x)))
         .map((traitType) =>
             fs
                 .readdirSync(`${traitTypesDir}/${traitType}/`)
@@ -79,7 +77,7 @@ const recreateOutputsDir = () => {
     }
     fs.mkdirSync(dir.outputs);
     fs.mkdirSync(`${dir.outputs}/metadata`);
-    fs.mkdirSync(`${dir.outputs}/punks`);
+    fs.mkdirSync(`${dir.outputs}/images`);
 };
 
 const allPossibleCases = (arraysToCombine, max) => {
@@ -148,7 +146,7 @@ const drawImage = async (traitTypes, background, index) => {
 
     // save image
     fs.writeFileSync(
-        `${dir.outputs}/punks/${index + 1}.png`,
+        `${dir.outputs}/images/${index + 1}.png`,
         canvas.toBuffer("image/png")
     );
 };
