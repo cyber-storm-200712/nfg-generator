@@ -1,6 +1,6 @@
 {
   "name": "nft-collection-generator",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "generate multiple nft collections using trates",
   "main": "./bin/index.js",
   "bin": {
@@ -17,6 +17,6 @@
   "license": "ISC",
   "dependencies": {
     "canvas": "^2.11.2",
-    "yargs": "^17.7.1"
+    "command-line-args": "^5.2.1"
   }
 }
